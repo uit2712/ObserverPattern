@@ -1,4 +1,5 @@
 ﻿using Promotions.Entities;
+using Promotions.Subjects;
 
 namespace Promotions.Observers
 {
@@ -13,6 +14,6 @@ namespace Promotions.Observers
             CustomerName = customerName;
         }
 
-        public abstract void Update(Promotion promotion);
+        public abstract void Update(Promotion promotion, ShoppingMall shoppingMall);
     }
 }

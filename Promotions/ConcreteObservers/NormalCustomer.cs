@@ -1,5 +1,6 @@
 ﻿using Promotions.Entities;
 using Promotions.Observers;
+using Promotions.Subjects;
 using System;
 
 namespace Promotions.ConcreteObservers
@@ -11,12 +12,12 @@ namespace Promotions.ConcreteObservers
         {
         }
 
-        public override void Update(Promotion promotion)
+        public override void Update(Promotion promotion, ShoppingMall shoppingMall)
         {
-            if (promotion == null || promotion.ForVIPCustomer)
+            if (promotion == null || shoppingMall == null || promotion.ForVIPCustomer)
                 return;
 
-            Console.WriteLine(string.Format("Xin chao {0}, ban co 1 khuyen mai: {1}", CustomerName, promotion.Content));
+            Console.WriteLine(string.Format("Xin chao {0}, ban co 1 khuyen mai tu {1}: {2}", CustomerName, shoppingMall.Name, promotion.Content));
         }
     }
 }

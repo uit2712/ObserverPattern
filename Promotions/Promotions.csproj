@@ -45,11 +45,13 @@
   <ItemGroup>
     <Compile Include="ConcreteObservers\NormalCustomer.cs" />
     <Compile Include="ConcreteObservers\VIPCustomer.cs" />
+    <Compile Include="ConcreteSubjects\GigaMall.cs" />
     <Compile Include="Entities\Promotion.cs" />
     <Compile Include="Observers\Customer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Subjects\Vincom.cs" />
+    <Compile Include="Subjects\ShoppingMall.cs" />
+    <Compile Include="ConcreteSubjects\Vincom.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

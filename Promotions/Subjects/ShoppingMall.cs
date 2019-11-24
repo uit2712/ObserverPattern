@@ -4,12 +4,13 @@ using System.Collections.Generic;
 
 namespace Promotions.Subjects
 {
-    class Vincom
+    class ShoppingMall
     {
+        public string Name { get; set; }
         public List<Customer> Customers { get; set; }
         public List<Promotion> Promotions { get; set; }
 
-        public Vincom()
+        public ShoppingMall()
         {
             Customers = new List<Customer>();
             Promotions = new List<Promotion>();
@@ -35,11 +36,11 @@ namespace Promotions.Subjects
             Customers.Remove(customer);
         }
 
-        private void Notify(Promotion promotion)
+        protected void Notify(Promotion promotion)
         {
             foreach (Customer customer in Customers)
                 if (customer != null)
-                    customer.Update(promotion);
+                    customer.Update(promotion, this);
         }
     }
 }
